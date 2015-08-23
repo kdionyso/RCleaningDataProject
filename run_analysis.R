@@ -96,7 +96,6 @@ indexds<-function(dt,activity,subject){
                                                str_replace_all(x, "\\(\\)|-","")))
      lapply(tidydatatable2, function(x) lapply(x,
                          function(y) names(y)<-cleanfeaturesaverage))
-     write.table(tidydatatable2, 'tidydataset.txt')
+     write.table(tidydatatable2, 'tidydataset.txt',row.name=FALSE)
      tidydatatable2
-
 }
